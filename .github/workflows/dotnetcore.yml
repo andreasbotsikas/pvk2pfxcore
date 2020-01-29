@@ -18,7 +18,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        # Artifact name
-        name: pvk2pfxcore.zip
+        # Artifact name, without .zip extension
+        name: pvk2pfxcore
         # Directory containing files to upload
         path: src\pvk2pfxcore\bin\Release\netcoreapp3.1
