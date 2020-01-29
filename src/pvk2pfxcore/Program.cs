@@ -37,6 +37,21 @@ namespace pvk2pfxcore
                 opts.Pfx = Path.Combine(Environment.CurrentDirectory, opts.Pfx);
             }
 
+            // Check that cer file exists
+            if (!File.Exists(opts.Spc))
+            {
+                // Error if not allowed to overwrite
+                Console.Error.WriteLine($"Public key file {opts.Spc} doesn't exist.");
+                return;
+            }
+            // Check that pvk file exists
+            if (!File.Exists(opts.Pvk))
+            {
+                // Error if not allowed to overwrite
+                Console.Error.WriteLine($"Private key file {opts.Pvk} doesn't exist.");
+                return;
+            }
+
             // If password is empty, pass null
             if (opts.PvkPassword != null && opts.PvkPassword.Length == 0)
             {
@@ -53,7 +68,7 @@ namespace pvk2pfxcore
             {
                 if (!opts.OverwritePfx)
                 {
-                    // throw error if not allowed to overwrite
+                    // Error if not allowed to overwrite
                     Console.Error.WriteLine($"Pfx file {opts.Pfx} exists. Specify -f to overwrite it.");
                     return;
                 }
