@@ -1,4 +1,4 @@
-#pvk2pfxcore
+# pvk2pfxcore
 
 A .net core 3.1 application to merge .cer and .pvk files into a .pfx file.
 
