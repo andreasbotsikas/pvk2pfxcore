@@ -615,8 +615,9 @@ namespace Org.Mentalis.Security.Certificates {
 		/// <returns>An array of bytes that represents the PFX encoded store.</returns>
 		/// <exception cref="ArgumentNullException"><paramref name="password"/> is a null reference (<b>Nothing</b> in Visual Basic).</exception>
 		private byte[] GetPfxBuffer(string password, bool exportPrivateKeys) {
-			if (password == null)
-				throw new ArgumentNullException();
+			// Allow no pass pfx for demos
+			//if (password == null)
+			//	throw new ArgumentNullException();
 			DataBlob data = new DataBlob();
 			try {
 				data.pbData = IntPtr.Zero;
