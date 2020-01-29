@@ -90,7 +90,7 @@ namespace Org.Mentalis.Security.Ssl.Tls1 {
 			m_MD5.Reset();
 			m_SHA1.Reset();
 		}
-		public void Dispose() {
+		public new void Dispose() {
 			if (!m_Disposed) {
 				m_Disposed = true;
 				m_MD5.Dispose();

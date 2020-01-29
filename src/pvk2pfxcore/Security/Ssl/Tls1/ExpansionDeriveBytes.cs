@@ -102,7 +102,7 @@ namespace Org.Mentalis.Security.Ssl.Tls1 {
 			m_Ai = m_HMAC.ComputeHash(m_Seed); // A(1)
 			m_NextBytes = GetNextBytes();
 		}
-		public void Dispose() {
+		public new void Dispose() {
 			if (!m_Disposed) {
 				m_Disposed = true;
 				m_HMAC.Clear();

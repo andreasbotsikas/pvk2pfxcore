@@ -115,7 +115,7 @@ namespace Org.Mentalis.Security.Ssl.Ssl3 {
 			m_Iteration = 1;
 			m_NextBytes = GetNextBytes();
 		}
-		public void Dispose() {
+		public new void Dispose() {
 			if (!m_Disposed) {
 				m_Disposed = true;
 				m_MD5.Clear();

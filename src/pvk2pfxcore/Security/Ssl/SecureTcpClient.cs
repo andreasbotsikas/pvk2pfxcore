@@ -54,6 +54,7 @@ namespace Org.Mentalis.Security.Ssl {
 		/// <exception cref="ArgumentNullException"><paramref name="localEP"/> is null (<b>Nothing</b> in Visual Basic).</exception>
 		/// <exception cref="SocketException">An operating system error occurs while accessing the Socket.</exception>
 		public SecureTcpClient(IPEndPoint localEP) : this(localEP, new SecurityOptions(SecureProtocol.None)) {}
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="SecureTcpClient"/> class and connects to the specified port on the specified host.
 		/// </summary>
@@ -63,6 +64,7 @@ namespace Org.Mentalis.Security.Ssl {
 		/// <exception cref="ArgumentOutOfRangeException"><paramref name="port"/> is less than MinPort -or- <paramref name="port"/> is greater than MaxPort.</exception>
 		/// <exception cref="SocketException">An error is encountered when resolving <paramref name="hostname"/><br>-or-</br><br>an error occurred while connecting to the remote host.</br></exception>
 		/// <exception cref="SecurityException">The security negotiation failed.</exception>
+		[Obsolete]
 		public SecureTcpClient(string hostname, int port) : this(hostname, port, new SecurityOptions(SecureProtocol.None)) {}
 		/// <summary>
 		/// Initializes a new instance of the <see cref="SecureTcpClient"/> class.
@@ -81,6 +83,7 @@ namespace Org.Mentalis.Security.Ssl {
 		public SecureTcpClient(IPEndPoint localEP, SecurityOptions options) : this(options) {
 			m_Client.Bind(localEP);
 		}
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="SecureTcpClient"/> class and connects to the specified port on the specified host.
 		/// </summary>
@@ -91,6 +94,7 @@ namespace Org.Mentalis.Security.Ssl {
 		/// <exception cref="ArgumentOutOfRangeException"><paramref name="port"/> is less than MinPort -or- <paramref name="port"/> is greater than MaxPort.</exception>
 		/// <exception cref="SocketException">An error is encountered when resolving <paramref name="hostname"/> -or- an error occurred while connecting to the remote host.</exception>
 		/// <exception cref="SecurityException">The security negotiation failed.</exception>
+		[Obsolete]
 		public SecureTcpClient(string hostname, int port, SecurityOptions options) : this(options) {
 			if (hostname == null)
 				throw new ArgumentNullException();
@@ -142,6 +146,7 @@ namespace Org.Mentalis.Security.Ssl {
 				throw new ArgumentNullException();
 			Connect(new IPEndPoint(address, port));
 		}
+
 		/// <summary>
 		/// Connects the client to the specified port on the specified host.
 		/// </summary>
@@ -152,6 +157,7 @@ namespace Org.Mentalis.Security.Ssl {
 		/// <exception cref="SocketException">An operating system error occurs while accessing the Socket.</exception>
 		/// <exception cref="ObjectDisposedException">The <see cref="SecureSocket"/> has been closed.</exception>
 		/// <exception cref="SecurityException">The security negotiation failed.</exception>
+		[Obsolete]
 		public virtual void Connect(string hostname, int port) {
 			if (hostname == null)
 				throw new ArgumentNullException();

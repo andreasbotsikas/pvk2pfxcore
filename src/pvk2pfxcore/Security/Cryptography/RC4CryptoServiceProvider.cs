@@ -255,7 +255,7 @@ namespace Org.Mentalis.Security.Cryptography {
 		/// <summary>
 		/// Releases all managed and unmanaged resources used by this class.
 		/// </summary>
-		private void Dispose() {
+		private new void Dispose() {
 			if (!m_Disposed) {
 				m_Disposed = true;
 				if (m_Managed != null) {
