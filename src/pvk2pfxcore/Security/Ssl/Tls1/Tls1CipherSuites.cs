@@ -38,6 +38,7 @@ using Org.Mentalis.Security.Ssl;
 using Org.Mentalis.Security.Ssl.Shared;
 using System.Text;
 using System.IO;
+using HMAC = Org.Mentalis.Security.Cryptography.HMAC;
 
 namespace Org.Mentalis.Security.Ssl.Tls1 {
 	internal sealed class Tls1CipherSuites {

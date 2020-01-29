@@ -35,6 +35,7 @@ using System;
 using System.Text;
 using System.Security.Cryptography;
 using Org.Mentalis.Security.Cryptography;
+using HMAC = Org.Mentalis.Security.Cryptography.HMAC;
 
 namespace Org.Mentalis.Security.Ssl.Tls1 {
 	/* P_hash(secret, seed) = HMAC_hash(secret, A(1) + seed) +
