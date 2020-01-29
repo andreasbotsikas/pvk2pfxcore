@@ -1,0 +1,1 @@
+ makecert -n "CN=TestCertificate" -len 2048 -r -a sha512 -e 01/01/2200 -sv test.pvk test.cer

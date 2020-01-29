@@ -1,0 +1,17 @@
+/* Error codes for the PVK functions. */
+
+/* Function codes. */
+#define PVK_F_LEND2BN					 100
+#define PVK_F_PVK2RSA					 101
+#define PVK_F_PVK_DECRYPT				 102
+#define PVK_F_PVK_ENCRYPT				 103
+#define PVK_F_PVK_READ					 104
+#define PVK_F_PVK_WRITE					 105
+#define PVK_F_RSA2PVK					 106
+
+/* Reason codes. */
+#define PVK_R_BAD_MAGIC_NUMBER				 100
+#define PVK_R_DECRYPT_ERROR				 101
+#define PVK_R_FILE_WRITE_ERROR				 102
+#define PVK_R_HEADER_READ_ERROR				 103
+#define PVK_R_INVALID_PRIVATE_KEY_FORMAT		 104

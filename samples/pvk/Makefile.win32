@@ -1,0 +1,25 @@
+# Editable options
+TOP=/crypto/ssl
+# Edit this to point to your OpenSSL inlude files
+SSLINC=$(TOP)/include
+# Edit this to point to your OpenSSL libraries
+SSLLIB=$(TOP)/lib
+
+
+
+CFLAGS=-I$(SSLINC) -MD -O1
+LDFLAGS=-LIBPATH:$(SSLLIB)
+RM=del
+
+OBJS=pvkread.obj pvkwrite.obj pvkerr.obj
+
+all: pvk.exe
+
+$(OBJS): pvk.h
+
+pvk.exe: $(OBJS) pvk.obj pvk.h
+        $(CC) $(CFLAGS) -o pvk.exe pvk.obj $(OBJS) libeay32.lib -link $(LDFLAGS)
+
+clean:
+        $(RM) *.obj
+        $(RM) pvk.exe

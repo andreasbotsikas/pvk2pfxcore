@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "pvk2pfxcore": {
+      "commandName": "Project",
+      "commandLineArgs": "--pvk ..\\..\\..\\..\\test.pvk --spc ..\\..\\..\\..\\test.cer --pfx  ..\\..\\..\\..\\test.pfx -f"
+    }
+  }
+}

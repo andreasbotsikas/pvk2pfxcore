@@ -1,0 +1,9 @@
+
+If you want to recompile the source then you need the OpenSSL source files.
+Edit the Makefile.win32 to point to your OpenSSL include and library files
+then, from a VC++ environment just do a:
+nmake -f Makefile.win32
+This should make the pvk.exe file in the current directory.
+
+For Unix just edit the Makefile and type make.
+
