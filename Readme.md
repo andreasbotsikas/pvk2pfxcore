@@ -1,6 +1,7 @@
+![Compile pvk2pfxcore](https://github.com/andreasbotsikas/pvk2pfxcore/workflows/Compile%20pvk2pfxcore/badge.svg)
 # pvk2pfxcore
 
-A .net core 3.1 application to merge .cer and .pvk files into a .pfx file.
+A .net core 3.1 application to merge .cer and .pvk files into a .pfx file. 
 
 This solution is using the deprecated [CryptImportKey function](https://docs.microsoft.com/en-us/windows/win32/api/wincrypt/nf-wincrypt-cryptimportkey).
 
