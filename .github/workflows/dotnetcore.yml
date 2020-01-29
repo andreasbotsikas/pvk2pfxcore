@@ -15,10 +15,12 @@ jobs:
         dotnet-version: 3.1.101
     - name: Build with dotnet
       run: dotnet build --configuration Release
+    - name: Publish single exe file
+      run:  dotnet publish -c Release -r win-x86 /p:PublishSingleFile=true
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name, without .zip extension
         name: pvk2pfxcore
         # Directory containing files to upload
-        path: src\pvk2pfxcore\bin\Release\netcoreapp3.1
+        path: src\pvk2pfxcore\bin\Release\netcoreapp3.1\win-x86\publish
